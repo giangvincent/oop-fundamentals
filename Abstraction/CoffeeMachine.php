@@ -33,6 +33,9 @@ class CoffeeMachine
         echo "Coffee is in the machine.";
     }
 
+    /**
+     * User can only know to press button when machine is ready, but can't know how machine run
+     */
     public function pressButton()
     {
         if ($this->state == "ready") {

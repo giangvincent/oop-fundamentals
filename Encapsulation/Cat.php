@@ -2,10 +2,16 @@
 
 class Cat
 {
+    /**
+     * Properties is set to private to prevent direct access
+     */
     private $mood;
     private $energy;
     private $hunger;
 
+    /**
+     * Can not see when function was called
+     */
     private function meow() {
         echo "Meow!";
     }

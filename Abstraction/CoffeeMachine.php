@@ -10,9 +10,9 @@ class CoffeeMachine
         if ($this->state == "ready") {
             $this->state = "processing";
             echo "Machine is running.";
-        } else {
-            echo "Machine is already running.";
+            return;
         }
+        echo "Machine is already running.";
     }
 
     private function stop()
@@ -20,9 +20,10 @@ class CoffeeMachine
         if ($this->state == "processing") {
             $this->state = "ready";
             echo "Machine is stopped.";
-        } else {
-            echo "Machine is already stopped.";
+
+            return;
         }
+        echo "Machine is already stopped.";
     }
 
     public function putCoffeeIn()
@@ -35,6 +36,8 @@ class CoffeeMachine
 
     /**
      * User can only know to press button when machine is ready, but can't know how machine run
+     *
+     * @return mixed
      */
     public function pressButton()
     {
@@ -44,8 +47,9 @@ class CoffeeMachine
             echo "Coffee is being made.";
             $this->stop();
             echo "Coffee is ready.";
-        } else {
-            echo "Coffee is already being made.";
+            return;
         }
+
+        echo "Coffee is already being made.";
     }
 }

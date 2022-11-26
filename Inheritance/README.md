@@ -1,0 +1,5 @@
+# Inheritance
+
+Ok, we saw how encapsulation and abstraction can help us develop and maintain a big codebase. But do you know what is another prolem in OOP design ? Objects are often very similar. They share common logic. But they’re not entirely the same. So One way to achive this is inheritance. It means that you create a (child) class by deriving from another (parent ) class. This is Inheritance. The child class reuses all fields and methods of the parent class and can implement its own.
+
+For example: A private teacher is a type of teacher. And any teacher is a type of Person. If our program needs to manage public and private teachers, but also other types of people like students, we can implement this class hierarchy. This way, each class adds only what is necessary for it while reusing common logic with the parent classes.

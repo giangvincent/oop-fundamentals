@@ -10,9 +10,10 @@ Abstract class Machine
         if ($this->state == "ready") {
             $this->state = "processing";
             echo "Machine is running.";
-        } else {
-            echo "Machine is already running.";
+
+            return;
         }
+        echo "Machine is already running.";
     }
 
     protected function stop()
@@ -20,9 +21,10 @@ Abstract class Machine
         if ($this->state == "processing") {
             $this->state = "ready";
             echo "Machine is stopped.";
-        } else {
-            echo "Machine is already stopped.";
+
+            return;
         }
+        echo "Machine is already stopped.";
     }
 
 }
